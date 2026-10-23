@@ -10,9 +10,6 @@ permissions:
 
 env:
   CARGO_TERM_COLOR: always
-  # JS actions (upload-artifact) still declare a Node 20 runtime upstream;
-  # opt into Node 24 to silence the deprecation.
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
 jobs:
   build:
