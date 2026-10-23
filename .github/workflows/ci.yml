@@ -16,7 +16,7 @@ jobs:
     name: Build & test (Linux x86_64)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -36,7 +36,7 @@ jobs:
         run: cargo clippy --all-targets --locked
 
       - name: Upload binary
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: i-can-count-to-four-linux-x86_64
           path: target/release/i-can-count-to-four
