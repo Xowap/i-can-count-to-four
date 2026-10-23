@@ -1,0 +1,24 @@
+[package]
+name = "i-can-count-to-four"
+version = "0.1.0"
+edition = "2021"
+description = "Scan a filesystem for traces of the compromised eMudhra intermediate CA certificates (CVE-2026-111943)"
+license = "Apache-2.0"
+
+[dependencies]
+aho-corasick = "1.1.5"
+base64 = "0.23.1"
+clap = { version = "4.6.7", features = ["derive"] }
+crossbeam-channel = "0.5.17"
+hex = "0.4.3"
+ignore = "0.4.33"
+libc = "0.2.191"
+memchr = "2.8.3"
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+sha2 = "0.11.1"
+x509-parser = "0.18.1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
